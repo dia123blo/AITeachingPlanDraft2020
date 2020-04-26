@@ -10,18 +10,13 @@
 对机器学习的认识和定义可以从多个方面进行：
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=机器学习]
-\begin{center}
 学习是人类获取知识的重要途径和自然智能的重要标志, 机器学习则是机器获取知识的重要途径和人工智能的重要标志.
 它是人工智能的一个分支, 探索如何让计算机通过经验学习提高性能---Stuart Russell (伯克利人工智能学家, 友善及安全 AI 的先驱之一).
-\hfill
-\end{center}
 \end{tcolorbox}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=机器学习]
-\begin{center}
 对于某类任务 T 和性能度量 P，如果计算机程序在 T 上以 P衡量的性能随着经验 E 而自我完善，就称这个计算机程序从经验 E 学习---- (Tom Mitchell, “全球机器学习教父”).
 \hfill
-\end{center}
 \end{tcolorbox}
 普遍认为，机器学习（Machine Learning，常简称为 ML）的处理系统和算法是主要通过找出数据里隐藏的模式进而做出预测的识别模式，它是人工智能（Artificial Intelligence，常简称为 AI）的一个重要子领域.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -30,7 +25,7 @@
 \subsubsection{机器学习概述}
 \paragraph{机器学习的常见误解}
 
-「机器学习是一个新的领域, 它已经代替了人工智能的地位」. 这种误解是最近机器学习热潮产生的副作用, 大量学生在之前没有接触过人工智能的情况下学习了机器学习课程. 机器学习一直是人工智能的核心话题：阿兰·图灵在二十世纪五十年代的论文中已经认为学习是通向人工智能最可行的途径. 这一观点似乎是正确的, 人工智能最突出的早期成果, Arthur Samuel 的跳棋程序就是使用机器学习构建的.
+「机器学习是一个新的领域, 它已经代替了人工智能的地位」. 这种误解是最近机器学习热潮产生的副作用, 大量学生在之前没有接触过人工智能的情况下学习了机器学习课程. 机器学习一直是人工智能的核心话题：阿兰·图灵在二十世纪五十年代的论文中已经认为学习是通向人工智能最可行的途径. 人工智能最突出的早期成果, Arthur Samuel使用机器学习构建 跳棋程序就是.
 
 「机器不能学习, 它们只能做程序员告诉它的事情」. 这显然是错的, 程序员能够告诉机器如何学习. Samuel 是一个优秀的跳棋玩家, 但他的程序很快就通过学习超过了他. 近年来, 机器学习的很多应用都需要大量数据来进行训练.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,42 +42,28 @@
 学习能力是人工智能的关键.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=监督学习( Supervised learning)]
-\begin{center}
-使用有标签数据进行学习
-
-典型应用场景：分类、回归
-\hfill
-\end{center}
+    使用有标签数据进行学习. 典型应用场景：分类和回归
 \end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=非监督学习( Unsupervised learning)]
-\begin{center}
 使用无标签数据进行学习
 
 典型应用场景：聚类
-\hfill
-\end{center}
 \end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=半监督学习( Semi-supervised learning)]
-\begin{center}
 数据一部分有标签, 无标签数据的数量>>有标签数据数量
 
 典型应用场景：海量数据分类
-\hfill
-\end{center}
 \end{tcolorbox}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{tcolorbox}[colback=white!50,colframe=orange!50,title=强化学习( Reinforcement learning)]
-\begin{center}
 使用无标签但有反馈的数据进行学习
 
 典型场景：策略推理
-\hfill
-\end{center}
 \end{tcolorbox}
 
 机器学习的基本定律：模型的出错率正比于模型复杂程度与样本大小的比.
@@ -105,7 +86,7 @@
 \label{AI32fig2019121501}
 \end{figure}
 
-\textbf{深度学习}：模仿人脑处理信息的过程——分层处理机制. 底层捕捉输入的“简单”特征, 高层通过组合底层特征从而形成更加复杂抽象化的特征. 深度学习由简到繁, 自动实现特征提取. 深度学习结构如图\ref{AI32fig2019121502}.
+\textbf{深度学习}：模仿人脑处理信息的过程——分层处理机制. 底层捕捉输入的“简单”特征, 高层通过组合底层特征从而形成更加复杂抽象化的特征. 深度学习由简到繁, 自动实现特征提取. 深度学习结构如图 \ref{AI32fig2019121502}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
@@ -164,14 +145,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{学习系统}
 如果一 个系统在与环境相互作用时, 能利用过去与环境作用时 得到的信息, 并提高其性能 , 那么这样的系统就是学习 系统. 它包括环境、学习环 节、知识库和执行环节(图\ref{AI32fig2701}).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.76\textwidth]{zhengxiangtuili2019112701.PNG}
+%\caption{学习系统}
+%\label{AI32fig2701}
+%\end{figure}
+%%%%%%%----------------------------------------
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.76\textwidth]{zhengxiangtuili2019112701.PNG}
+\begin{center}
+\begin{tikzpicture}[font={\sf \small},scale=0.8]
+\def \smbwd{2cm}
+\def \smbwe{4cm}
+\thispagestyle{empty}
+%定义流程图的具体形状
+\node (ABC0) at (-1,0) [draw, process,minimum width=\smbwd, minimum height=0.5cm,xshift=-1cm] {环境};         % 环境
+\node (nCz)[draw, process,align=center,right=1.5cm of ABC0,yshift=0cm] {\textcolor[rgb]{0,0,1}{学习环节}};       %学习环节
+\draw[->](ABC0)--(nCz);
+\node (AB0)[draw, process,align=center,right=1.5cm of nCz,yshift=0cm,xshift=1.0cm] {知识库};                    %知识库
+\node (ss0)[align=center,above=1cm of AB0,xshift=1.0cm]{};
+\draw[->](nCz)--(AB0);
+\node (AMn)[draw, process,align=center,right=1.5cm of AB0,yshift=0cm] {\textcolor[rgb]{0,0,1}{执行环节}};        %执行环节
+\draw[->](AB0)--(AMn);
+\draw[->](AMn)|-(ss0.center)-|(nCz);
+\end{tikzpicture}
+\end{center}
 \caption{学习系统}
 \label{AI32fig2701}
 \end{figure}
-
 环境是学习系统所感知到的外界信息集合, 也是学习系统的外界来源. 信息的水平(一般化程度)和质量(正确性)对学习系统影响较大.
 
 \begin{itemize}
@@ -212,6 +214,33 @@
 \end{figure}
 如何自动化机器学习管道(Axel de Romblay)：
 从摄取数据到 预处理、优化, 然后预测结果, 每个步骤都由人来控制和执行. AutoML 主要关注两个主要方面：数据采集 / 收集和预测. 中间发生的所有其他步骤都可以轻松实现自动化, 同时提供经过优化并准备好进行预测的模型.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{netZooPy库}
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple PandaPy
+
+能够使用混合int，float，datetime，str等数据类型进行机器学习项目，消耗的内存比Pandas少大约三分之一！
+
+1）对于小型数据集（即加号，多号，对数）的简单计算，PandaPy比Pandas快25倍-80倍.
+
+2）对于小型数据集上的表函数（即组，枢纽，放置，连接，填充，填充）, PyPanda比Pandas快5倍-100倍.
+
+3）对于大多数使用小数据的用例，PandaPy比Dask，Modin Ray和Pandas快.
+
+3、Google Earth Engine – 300多个Jupyter笔记本可分析地理空间数据.
+
+\href{https://github.com/netZoo/netZooM}{netZooM-github}, \href{https://github.com/netZoo/netZooPy}{netZooPy-github}, \href{https://github.com/DanyWind/fast_neptune}{Fast Neptune库}使我们能够快速记录启动机器学习实验所需的所有信息.
+
+Using PANDA to infer gene regulatory networks
+
+panda.mlx
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.46\textwidth]{pandamatlab2020032501.PNG}
+\caption{netZooM (panda工具箱)}
+\label{pandamatlab2020032501}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{记忆学习}
 
@@ -335,7 +364,6 @@
 
 \item (2)去掉条件: 把示例中的某些无关的子条件舍去.
 
-例如, 有如下示例:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}
   花色($c_1$, 红桃)$\wedge$点数($c_1$, 2)
@@ -352,7 +380,10 @@ $\bullet$ 规则1: 花色($c_1$, x) $\wedge$ 花色($c_2$, x) $\wedge$ 花色($c
 
 \item (3)增加选择: 在析取条件中增加一个新的析取项. 包括前件析取法和内部析取法.
 
-\textbf{前件析取法}: 是通过对示例的前件的析取来形成知识的. 例如:
+\textbf{前件析取法}: 是通过对示例的前件的析取来形成知识的.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}示例的前件有4个:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item 点数($c_1$, J)$\rightarrow$脸($c_1$)
@@ -363,9 +394,13 @@ $\bullet$ 规则1: 花色($c_1$, x) $\wedge$ 花色($c_2$, x) $\wedge$ 花色($c
 将各示例的前件进行析取, 就可得到所要求的规则:
 
  $\bullet$ 规则2: 点数($c_1$, J)∨点数($c_1$, Q)∨点数($c_1$, K)$\rightarrow$脸($c_1$)
+\end{example}
 
-\textbf{内部析取法}: 是在示例的表示中使用集合与集合的成员关系来形成知识的. 例如, 有如下关于“脸牌”的示例:
+\textbf{内部析取法}: 是在示例的表示中使用集合与集合的成员关系来形成知识的.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
+有如下关于“脸牌”的示例:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
 \item 点数$c_1\in {J}\rightarrow$脸($c_1$)
@@ -375,8 +410,8 @@ $\bullet$ 规则1: 花色($c_1$, x) $\wedge$ 花色($c_2$, x) $\wedge$ 花色($c
 
 用内部析取法, 可得到如下规则:
 
-  $\bullet$ 规则3: 点数$(c_1)\in {J, Q, K}\rightarrow$脸($c_1$)
-
+$\bullet$ 规则3: 点数$(c_1)\in {J, Q, K}\rightarrow$脸($c_1$)
+\end{example}
 \item (4)曲线拟合: 对数值问题的归纳可采用曲线拟合法.
 \end{itemize}
 假设示例空间中的每个示例$(x, y, z)$都是输入$x, y$与输出$z$之间关系的三元组.
@@ -395,12 +430,16 @@ $\bullet$ 规则4: $z=2x+3y+1$.
 \end{example}
 %%%%%%-------------------------------------------------
 \begin{remark}
-在上述前三种方法中, 方法(1)是把常量转换为变量；方法(2)是去掉合取项(约束条件)；方法(3)是增加析取项. 它们都是要扩大条件的适用范围. 从归纳速度上看, 方法(1)的归纳速度快, 但容易出错；方法(2)归纳速度慢, 但不容易出错. 因此, 在使用方法(1)时应特别小心. 例如:
+在上述前三种方法中, 方法(1)是把常量转换为变量；方法(2)是去掉合取项(约束条件)；方法(3)是增加析取项. 它们都是要扩大条件的适用范围. 从归纳速度上看, 方法(1)的归纳速度快, 但容易出错；方法(2)归纳速度慢, 但不容易出错. 因此, 在使用方法(1)时应特别小心.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{example}
 对示例4、示例5及示例6, 若使用方法(1) ,则会归纳出如下的错误规则:
 
-$\bullet$ 规则5: (错误)点数($c_1$, $x$)$\rightarrow$脸($c_1$),
+规则5: (错误)点数($c_1$, $x$)$\rightarrow$脸($c_1$),
+
 它说明, 归纳过程是很容易出错的.
+\end{example}
 \end{remark}
 
 决策树是一种由节点和边构成的用来描述分类过程的层次数据结构. 该树的根接点表示分类的开始, 叶节点表示一个实例的结束, 中间节点表示相应实例中的某一属性, 而边则代表某一属性可能的属性值.
@@ -417,7 +456,7 @@ $\bullet$ 规则5: (错误)点数($c_1$, $x$)$\rightarrow$脸($c_1$),
 \label{AI32fig2704}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 决策树还可以表示成规则的形式. 上图的决策树可表示为如下规则集:
+ 决策树还可以表示成规则的形式. 上图\ref{AI32fig2704}的决策树可表示为如下规则集:
 \begin{Verbatim}
     IF  鸟类会飞       AND  是家养的          THEN  该鸟类是和平鸽
     IF  鸟类会飞       AND  不是家养的      THEN  该鸟类是信天翁
@@ -432,7 +471,7 @@ D3算法是昆兰(J.R.Quinlan)于1979年提出的一种以信息熵(entropy)的�
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{ID3算法的数学基础}
-下面讨论信息熵和条件熵的数学概念
+先引入信息熵和条件熵的数学概念
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subparagraph{信息熵}
 信息熵是对信息源整体不确定性的度量. 假设$X$为信源, $x_i$为$X$所发出的单个信息, $P(x_i)$为X发出$x_i$的概率, 则信息熵可定义为:
@@ -467,7 +506,7 @@ ID3算法的学习过程:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}
-用ID3算法完成下述学生选课的例子
+用ID3算法完成下述学生选课
 
 假设将决策$y$分为以下３类:
 \begin{Verbatim}
@@ -488,6 +527,7 @@ ID3算法的学习过程:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table} [!tb]
 \caption{关于选课决策的训练例子集}
+\vspace{-0.2cm}
 \begin{center}
 \begin{tabular} {lccccc}
 \hline
@@ -518,7 +558,7 @@ $y_i$&$x_1$&$x_2$&$x_3$\\
 \end{align}
 即有:
 \begin{align}
-  H(S)= -(\frac 1 8)\log_2(\frac 1 8)- (\frac 2 8)\log_ 2(\frac 2 8)- (5/8)\log_ 2(\frac 5 8) =1.2988.
+    H(S)= -\left(\frac 1 8\right)\log_2 \left(\frac 1 8\right)- \left(\frac 2 8\right)\log_ 2\left(\frac 2 8 \right)- \left(\frac 5 8\right)\log_ 2\left(\frac 5 8\right) =1.2988.
 \end{align}
 
 按照ID3算法, 需要选择一个能使$S$的期望熵为最小的一个属性对根节点进行扩展, 因此我们需要先计算$S$关于每个属性的条件熵:
@@ -589,7 +629,7 @@ H(S_1)&= - P_{s1}(y_1)\log_2 P_{s1}(y_1) - P_{s_1}(y_2)\log_2 P_{s1}(y_2 )- P_{s
 \node (x31y3)[draw, process,align=center,right=2cm of slkj] {$x_3=1,y_3$};
 \node (S) at (0,0) [draw, process,right=2cm of x31y3,minimum width=\smbwd, minimum height=0.5cm,yshift=2.05cm] {$S$};
 \node (x32x1x2)[draw, process,right=5cm of x31y3,minimum width=\smbwd, minimum height=0.5cm] {$x_3=2,x_1,x_2$};
-\draw[thick,blue] (x31y3.east)--(S.south) node[left,yshift=-0.55cm,xshift=-1.65cm,rotate=25] {$x_3=1$};
+\draw[thick,blue] (x31y3.east)--(S.south) node[left,yshift=-0.55cm,xshift=-1.65cm,rotate=29] {$x_3=1$};
 \draw[thick,blue] (x32x1x2.north)--(S.south) node[left,yshift=-0.75cm,xshift=2.65cm,rotate=-30] {$x_3=2$};
 \end{tikzpicture}
 \caption{部分决策树}
@@ -631,15 +671,15 @@ H(S_1)&= - P_{s1}(y_1)\log_2 P_{s1}(y_1) - P_{s_1}(y_2)\log_2 P_{s1}(y_2 )- P_{s
 \subsection{解释学习的模型}
 模型组成说明:
 
-EXL 为学习系统
+1) EXL 为学习系统
 
-KB 为领域知识库, 它是不同概念描述之间进行转换所使用的规则集合;
+2) KB 为领域知识库, 它是不同概念描述之间进行转换所使用的规则集合;
 
-PS 为执行系统;
+3) PS 为执行系统;
 
-D1 是输入的概念描述, 一般为不可操作的;
+4) D1 是输入的概念描述, 一般为不可操作的;
 
-D2 是学习结束时输出的概念描述, 它是可操作的.
+5) D2 是学习结束时输出的概念描述, 它是可操作的.
 
 执行过程: 先由EXL接受输入的概念描述D1, 然后再根据KB中的知识对D1进行不同描述的转换, 并由PS对每个转换结果进行测试, 直到被PS所接受, 即为可操作的概念描述D2为止；最后输出D2.
 
@@ -1110,7 +1150,28 @@ E&=-\frac 1 2 \big(w_{12}v_1v_2+w_{13}v_1v_3+w_{21}v_2 v_1+w_{23}v_2v_3+w_{31}v_
 \end{result}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{深度神经网络——DNN}
-2006年, Hinton利用预训练方法缓解了局部最优解问题, 将隐含层推动到了7层 \cite{Hinton2006-9587}, 神经网络真正意义上有了“深度”, 由此揭开了深度学习的热潮. 这里的“深度”并没有固定的定义——在语音识别中4层网络就能够被认为是“较深”, 而在图像识别中常见到20层以上的网络. 为了克服梯度消失, ReLU、maxout等传输函数代替了sigmoid, 形成了如今DNN的基本形式. 单从结构上来说, 全连接的DNN和图\ref{MultilayerPercepton020201}的多层感知机是没有任何区别的. DNN就是用了很多超出浅层神经网络的技巧的多层网络, 它能够“深”到解决神经网络很难解决的问题.
+2006年, Hinton利用预训练方法缓解了局部最优解问题, 将隐含层推动到了7层 \cite{Hinton2006-9587}, 神经网络真正意义上有了“深度”, 由此揭开了深度学习的热潮. 这里的“深度”并没有固定的定义——在语音识别中4层网络就能够被认为是“较深”, 而在图像识别中常见到20层以上的网络. 为了克服梯度消失, ReLU、maxout等传输函数代替了sigmoid, 形成了如今DNN的基本形式. 单从结构上来说, 全连接的DNN和图\ref{MultilayerPercepton020201}的多层感知机是没有任何区别的.
+
+深度学习并不是一种独立的学习方法, 会用到有监督和无监督的学习方法来训练深度神经网络.
+但由于近几年该领域发展迅猛, 一些特有的学习手段相继被提出（如残差网络）, 因此越来越多的人将其单独看作一种学习的方法.
+最初的深度学习是利用深度神经网络来解决特征表达的一种学习过程.
+深度神经网络本身并不是一个全新的概念, 可大致理解为包含多个隐含层的神经网络结构. 为了提高深层神经网络的训练效果, 人们对神经元的连接方法和激活函数等方面做出相应的调整.
+其实有不少想法早年间也曾有过, 但由于当时用于训练的数据量不足、计算能力落后, 因此最终的效果不尽如人意.
+但随着近几年互联网的成熟, 以及GPU系统的提高, 深度学习的潜力逐渐被挖掘, 深度学习以摧枯拉朽般地效果实现了各种任务, 使得似乎所有的机器辅助功能都变为可能.
+无人驾驶汽车和预防性医疗保健, 甚至影视剧的推荐系统.
+
+DNN是用了很多浅层神经网络的技巧之外的多层网络, 它能够“深”到解决神经网络很难解决的问题.
+深度学习则是AI训练的重要手段之一,  学习要靠硬件和算法支撑 这方面.
+在深层学习方面, 存在来给个阵营: Intel力挺CPU, NVIDIA则力挺GPU.
+2020年3月, Intel实验室联合美国莱斯大学宣布了一种突破性的深度学习新算法SLIDE.
+SLIDE基于散列开发, 而非当前最富盛名的BP算法（反向传播算法）所基于的矩阵乘法.
+借助SLIDE, CPU用于传统AI模型深度学习训练的效率大大提升.
+\begin{exampleT}
+一套拥有44个Xeon核心的平台和一套由8张NVIDIA Vlta V100加速卡支撑的平台（TensorFlow框架, 价值10万美元）执行相同的训练任务, 前者用1小时, 后者用了3.5小时.
+Intel还表示, 它们这套平台尚未充分优化, 还是“残血”状态, 比如处理器的DLBoost并未启用.
+不过, 这套44核至强平台的CPU型号并未公布, 一说就是22核心44线程的至强铂金6238, 一说是双路至强铂金6238, 还有可能是未发布的产品.
+\end{exampleT}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
@@ -1122,13 +1183,31 @@ E&=-\frac 1 2 \big(w_{12}v_1v_2+w_{13}v_1v_3+w_{21}v_2 v_1+w_{23}v_2v_3+w_{31}v_
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.76\textwidth]{DNN1912180.png}
+\includegraphics[width=0.6\textwidth]{DNN1912180.png}
 \caption{DNN的各种结构(1)}
 \label{DNN191218121500010}
 \end{figure}
+Github上\href{https://github.com/zggl/DenseNet}{DenseNet}的其他实现方式.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Densetransferflag0322.png}
+\caption{Desnenet结构}
+\label{Densetransferflag03220304}
+\end{figure}
+
+使用Matlab中的DNN 设计APP可以很快设计出DNN网络 \ref{DNNDesigner20200304}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{DNNDesigner.pdf}
+\caption{Matlab中的DNN 设计APP}
+\label{DNNDesigner20200304}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{高速公路网络（Highway network）}
-高速公路网络和深度残差学习（DRL）进一步避免了梯度消失，网络层数达到了前所未有的一百多层（深度残差学习: 152层）\cite{HeCVPR2016-9590, NIPS2015-5850}.
+高速公路网络和深度残差学习（DRL）进一步避免了梯度消失, 网络层数达到了前所未有的一百多层（深度残差学习: 152层）\cite{HeCVPR2016-9590, NIPS2015-5850}.
 高速公路网络受LSTM门机制的启发, 给网络添加一个传递门和一个搬运门. Highway网络再输入某一层网络的数据一部分经过非线性变换, 另一部分直接从该网络跨过去不做任何转换, 就想走在高速公路上一样, 而多少的数据需要非线性变换, 多少的数据可以直接跨过去, 是由一个权值矩阵和输入数据共同决定的.
 \begin{align}
 \mathbf{y}=H\left(\mathbf{x}, \mathbf{W}_{\mathbf{H}}\right) \cdot T\left(\mathbf{x}, \mathbf{W}_{\mathbf{T}}\right)+\mathbf{x} \cdot C\left(\mathbf{x}, \mathbf{W}_{\mathbf{C}}\right)
@@ -1149,7 +1228,7 @@ $C=(c_1, c_2, \cdots, c_n)$,其中每个数字也都是$(0, 1)$之间的浮点�
 \caption{Highway网络的迭代误差}
 \label{20170105154423858}
 \end{figure}
-当网络很深的时候，使用了Highway的网络更容易收敛。
+当网络很深的时候, 使用了Highway的网络更容易收敛.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{残差网络}
 残差网络用于解决由深度增加而出现错误率增加的情况, 通过拟合残差映射来取代直接的拟合映射.
@@ -1165,7 +1244,7 @@ $F(x) + x$ 的形式可以通过前愦神经网络中的快捷连接来实现, �
 网络要学习的是$H(x)$, 那么由于图中$\textup{identity} x$之间跨过了2层, 那么其实相当于拟合的是$F(x)=H(x)-x$, 这就是残差概念的来源, 这是论文里的说法.
 作者提出的结构打破了传统的神经网络$n-1$层的输出只能给$n$层作为输入的惯例, 使某一层的输出可以直接跨过几层作为后面某一层的输入.
 图\ref{DRL2020020301}就是其构造深度残差网络的构思来源图, 一个是56层的网络一个是20层的网络, 从原理上来说其实56层网络的解空间是包括了20层网络的解空间的, 换而言之也就是说, 56层网络取得的性能应该大于等于20层网络的性能的.
-但是从训练的迭代过程来看, 56层的网络无论从训练误差来看还是测试误差来看, 误差都大于20层的网络（这也说明了为什么这不是过拟合现象, 因为56层网络本身的训练误差都没有降下去）.
+但是从训练的迭代过程来看, 56层的网络无论从训练误差来看还是测试误差来看, 误差都大于20层的网络(这也说明了为什么这不是过拟合现象, 因为56层网络本身的训练误差都没有降下去).
 导致这个原因就是虽然56层网络的解空间包含了20层网络的解空间, 训练网络用的随机梯度下降策略往往得不到全局最优解, 而是局部的最优解, 显而易见56层网络的解空间更加的复杂, 所以导致使用随机梯度下降算法无法解到最优解.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -1183,7 +1262,7 @@ $F(x) + x$ 的形式可以通过前愦神经网络中的快捷连接来实现, �
 
 2、为了保持每一层网络的参数差不多, 每当经过了池化层输入的维度减少了一般, 那么滤子的个数就要增加一倍.
 
-其实深度残差网络和Highway网络这两种网络结构都能够让一部分的数据可以跳过某些变换层，而直接到后面的层中去，只不过Highway网络需要一个权值来控制每次直接通过的数据量，而深度残差网络就直接让一部分数据通到了后面。
+其实深度残差网络和Highway网络这两种网络结构都能够让一部分的数据可以跳过某些变换层, 而直接到后面的层中去, 只不过Highway网络需要一个权值来控制每次直接通过的数据量, 而深度残差网络就直接让一部分数据通到了后面.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{卷积神经网络 (Convolutional Neural Networks, CNN)}
 人工神经网络包括多个神经网络层（卷积层、全连接层、LSTM等）, 每一层又包括很多神经元, 超过三层的非线性神经网络都可以被成为深度神经网络.
@@ -1194,8 +1273,8 @@ $F(x) + x$ 的形式可以通过前愦神经网络中的快捷连接来实现, �
 深度学习由一连串可微分的参数化的层组成, 而且是用反向传播算法端到端地训练的.
 \begin{remark}
 \textbf{深度学习领域被引最高的论文}:
-神经网络实际上是软件. 用形象点的类比来说, 可以把神经网络视为一个超级大的万能工匠玩具——大量互相连接的节点阵列, 可以训练来完成许多任务, 从语言翻译到识别物体、识别人类讲话.
-作为“LSTM 之父”的 Jürgen Schmidhuber 在深度学习领域的贡献仍然获得了整个社区的的认可.
+神经网络实际上是一个泛逼近器. 用形象点的类比来说, 可以把神经网络视为一个超级大的万能工匠玩具——大量互相连接的节点阵列, 可以训练来完成许多任务, 从语言翻译到识别物体、识别人类讲话.
+作为“LSTM 之父”的 Jürgen Schmidhuber 在深度学习领域的贡献仍然获得了整个社区的认可.
 Google Scholar 2019年统计发现:  Hochreiter 和 Schmidhuber 1997 年发表的 LSTM 论文成为了20世纪被引最高的深度学习研究论文\cite{HochreiterNC1997}.
 \end{remark}
 
@@ -1467,7 +1546,7 @@ CELU \cite{hendrycks2016gelu} 定义为
 \end{align}
 \end{remark}
 \begin{remark}
-高斯线性误差单元 (GELU), 是高性能神经网络的一种激活函数. GELU的非线性体现在它的随机正则化算子会随机地应用恒等映射和零映射到神经元的输入上. 
+高斯线性误差单元 (GELU), 是高性能神经网络的一种激活函数. GELU的非线性体现在它的随机正则化算子会随机地应用恒等映射和零映射到神经元的输入上.
 GELU的非线性权重输入由幅值决定, 不同于ReLUs中由符号决定.
 \begin{align}
   \operatorname{GELU}(x)=x P(X \leq x)=x \Phi(x)
@@ -1486,13 +1565,40 @@ Bent-identity
 \begin{align}
   f(x) = \frac{\sqrt{x^2 + 1} - 1}{2} +x
 \end{align}
-Rothaus在1976年提出.因为Bent函数既是非线性度最优的布尔函数, 介于 Identity 与 ReLU 之间的一种折衷选择. 它允许非线性行为, 尽管其非零导数有效提升了学习并克服了与 ReLU 相关的静默神经元的问题. 
-由于其导数可在 1 的任意一侧返回值，因此它可能容易受到梯度爆炸和消失的影响.
 
-\href{https://arxiv.org/pdf/1901.05894.pdf}{LiSHT function}: Linearly Scaled Hyperbolic Tangent
+Synthesization of many useful properties of other activations, including PReLU, ELU, and SELU and CIFAR -10 experiments  validation \cite{Godfrey2019-9846}, 2019 IEEE International Conference on Systems, Man and Cybernetics (SMC), 6-9 Oct. 2019.
 
+Rothaus在1976年提出.因为Bent函数既是非线性度最优的布尔函数, 介于 Identity 与 ReLU之间的一种折衷选择. 它允许非线性行为, 尽管其非零导数有效提升了学习并克服了与 ReLU相关的静默神经元的问题.
+由于其导数可在 1 的任意一侧返回值, 因此它可能容易受到梯度爆炸和消失的影响.
+
+\href{https://arxiv.org/pdf/1901.05894.pdf}{LiSHT (Linearly Scaled Hyperbolic Tangent) function}:
 \begin{align}
-  \phi(x)=x \cdot g(x)
+  \phi(x)=x \cdot g(x), g(x)=\operatorname{Tanh}(x)=\frac{\exp ^{x}-\exp ^{-x}}{\exp ^{x}+\exp ^{-x}}
+\end{align}
+
+
+
+Swish activation function \cite{Ramachandran2018}
+\begin{align}
+  y(x)=x /\left(1+e^{-x}\right).
+\end{align}
+
+\href{https://arxiv.org/pdf/1808.00783.pdf}{ELiSH-\href{https://workshops.aapr.at/wp-content/uploads/2019/05/ARW-OAGM19_41.pdf}{The Quest for the Golden Activation Function}: Proceedings of the ARW \& OAGM Workshop 2019, May 9-10, 2019 in Steyr, Austria}(Exponential Linear Sigmoid SquasHing)
+
+A piecewise activation function, which shares the goodness of Swish in positive part \& ELU and Sigmoid in its negative part.
+In Swish, Sigmoid improves the information flow and Linear avoids a vanishing gradient, which is also the main motivation to design ELiSH.
+\begin{align}
+    y(x)=\left\{\begin{array}{ll}
+    x /\left(1+e^{-x}\right) & x \geq 0 \\
+    \left(e^{x}-1\right) /\left(1+e^{-x}\right) & x<0
+    \end{array}\right.
+\end{align}
+HardELiSH as a multiplication of HardSigmoid and ELU in negative part and HardSigmoid and Linear in positive part
+\begin{align}
+    y(x)=\left\{\begin{array}{ll}
+    x \times \max (0, \min (1,(x+1) / 2)) & x \geq 0 \\
+    \left(e^{x}-1\right) \times \max (0, \min (1,(x+1) / 2)) & x<0
+    \end{array}\right.
 \end{align}
 
 Soft shrinkage function elementwise:
@@ -1616,7 +1722,7 @@ Inverse square root linear unit (ISRLU) \cite{BradCarlile2017}
 f(x)=\left\{\begin{array}{ll}
 {\frac{x}{\sqrt{1+\alpha x^{2}}}} & {\text { for } x<0} \\
 {x} & {\text { for } x \geq 0}
-\end{array}\right., x\in \left(-\frac{1}{\sqrt{\alpha}}, \infty\right)  
+\end{array}\right., x\in \left(-\frac{1}{\sqrt{\alpha}}, \infty\right)
 \end{align}
 
 SoftPlus \cite{glorot2011}
@@ -2174,7 +2280,7 @@ LSTM和GRU之间的主要区别在于它们将中间隐藏状态向量和先前�
 GRU的完整方程式如下:
 \begin{align}
 \begin{aligned}
-&\textup{门} & \textup{状态}\\
+&\textup{门} &\quad \textup{状态}\\
 o_{t} &=\sigma\left(W_{o} s_{t-1}+U_{o} x_{t}+b_{o}\right) & \tilde{s}_{t} &=\sigma\left(W\left(o_{t} \odot s_{t-1}\right)+U x_{t}+b\right) \\
 i_{t} &=\sigma\left(W_{i} s_{t-1}+U_{i} x_{t}+b_{i}\right) & & s_{t}=\left(1-i_{t}\right) \odot s_{t-1}+i_{t} \odot \tilde{s}_{t}
 \end{aligned}
@@ -2282,6 +2388,20 @@ diffGrad能够以理想的损失锁定到全局最小值. Adam由于无法及时
 \href{https://ieeexplore.ieee.org/document/8939562}{IEEE TNNLS version}.
 All experiments are perfomed using the framework \href{https://github.com/kuangliu/pytorch-cifar}{pytorch-cifar}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{无限宽度DNN}
+无限宽度DNN会收敛成一类更为简单的模型, 称为高斯过程, 复杂的现象可以被归结为简单的线性代数方程.
+谷歌研究宣称可通过神经正切核使用贝叶斯推理或梯度下降分析式地训练无限宽度的神经网络. 使用谷歌开源的软件库 (Neural Tangents, \href{www.github.com/google/neural-tangents}{Neural Tangents: Fast and Easy Infinite Neural Networks in Python}),
+过程不仅简单且快速, 而且效果非常好, 甚至只需 5 行代码就能一步到位地构建并训练这种无限宽度网络的集成模型！论文已被 ICLR 2020 接收为 Spotlight 论文/
+深度学习都已取得了广泛的成功, 仍还有一些有趣而又重要的问题有待解答, 比如：为什么即使在过度参数化时, 深度神经网络（DNN）也能取得非常好的泛化能力？深度网络的架构、训练和性能之间有何关系？如何提取出深度学习模型中的显著特征？
+一大关键理论见解是：增加 DNN 的宽度能使 DNN 的行为更有规律可循, 也就人更容易理解它们. 近来的许多研究已经表明, 宽度可无限扩增的 DNN 可以收敛成另一类更为简单的名为「高斯过程的模型. 因此, 贝叶斯推理与卷积神经网络的梯度下降情况等复杂现象便可约简为简单的线性代数方程.
+从这些无限宽度网络所得到的见解通常也适用于它们对应的有限版本. 因此, 无限宽度网络可用作研究深度学习的透镜, 而且它们本身也可用作有用的模型.
+
+\href{https://arxiv.org/abs/1912.02803{论文地址}},
+\href{https://ai.googleblog.com/2020/03/fast-and-easy-infinitely-wide-networks.html}
+\href{https://github.com/google/neural-tangents}{GitHub地址},
+\href{https://colab.research.google.com/github/google/neural-tangents/blob/master/notebooks/neural_tangents_cookbook.ipynb}{Colab地址}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{强化学习及深度强化学习}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{AI的未来-NeurlPS 2019}
@@ -2309,7 +2429,15 @@ Uber研究员Jeff Clune已经表示明年会加入Open AI . 他还是新兴领�
 在演讲中, 他介绍了POET成对结合开放式开拓者, 让AI掌握自我进化来变得更聪明. 这一方法的灵感之一是自然进化. 他给了一个例子, 动画中的一双腿可以自动学习在更复杂的地形上走路.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{作业}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%---------------------------------
 \begin{think}
 假设$w_1(0)=0.2, w_2(0)=0.4, \theta(0)=0.3, \eta=0.4$, 请用单层感知器完成逻辑或运算的学习过程.
+\end{think}
+
+\begin{think}
+学习无监督的方式快速训练生成型循环神经网络(Recurrent World Models Facilitate Policy Evolution, David Ha(谷歌AI)和Jürgen Schmidhuber) \cite{ha2018worldmodels}.
+\end{think}
+
+\begin{think}
+  运行如下位置的演示代码：\href{https://colab.research.google.com/drive/16a3G7Hh8Pv1X1PhZAUBEnZEkXThzDeHJ#scrollTo=D_a2USyd4giE}{Convolutional Neural Network}
 \end{think}

@@ -203,7 +203,7 @@ The  professor  trains  Jack.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paragraph{自顶向下与自底向上分析}
-自顶向下分析, 是指从起始符开始应用文法规则, 一层一层地向下产生分析树的各个分支, 直至生成与输入语句相匹配的完整的句子结构为止.
+    自顶向下分析, 是指从起始符开始应用文法规则, 一层一层地向下产生分析树的各个分支, 直至生成与输入语句相匹配的完整的句子结构为止.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{example}
@@ -216,25 +216,25 @@ The  professor  trains  Jack.
 进行分析的过程是:
     首先从起始符“语句”开始, 正向运用规则:
 \begin{center}
-  语句 $\rightarrow$\,  句子   终标符
+    语句 $\rightarrow$\,  句子   终标符
 \end{center}
 把分析树的根节点“语句”替换为它的两个子节点“句子”和“终标符”.
     然后再对新生成的节点“句子”使用规则:
 \begin{center}
-  句子 $\rightarrow$\,  名词短语   动词短语
+    句子 $\rightarrow$\,  名词短语   动词短语
 \end{center}
 将其替换为两个子节点“名词短语”与“动词短语”.
     对于“名词短语”, 有两条规则可用, 若按规则的排列顺序, 则选用
 \begin{center}
-  名词短语 $\rightarrow$\,  冠词    名词
+    名词短语 $\rightarrow$\,  冠词    名词
 \end{center}
 将“名词短语”被替换为“冠词”和“名词”, 生成两个新节点. 对“冠词”使用规则:
 \begin{center}
-  冠词 $\rightarrow$\,  The
+    冠词 $\rightarrow$\,  The
 \end{center}
 对名词使用规则:
 \begin{center}
-  名词 $\rightarrow$\,  professor
+    名词 $\rightarrow$\,  professor
 \end{center}
 以此进行$\cdots$, 得到如图8.8所示的自顶向下的分析树.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -273,15 +273,15 @@ The  professor  trains  Jack.
 目前, 用于语义分析的技术比较多, 本节仅简单介绍语义文法和格文法.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{语义文法}
-    语义文法是在上下文无关文法的基础上, 将“名词短语”、“动词短语”、“名词”等这些不含有语义信息的纯语法类别, 用所讨论领域的专门信息, 像“山”、“水”、“动物”、等这些具有很强语义约束的语义类别来代替. 利用语义文法进行语义分析, 就可以排除像“论文收到教授”这类无意义的句子.
+    语义文法是在上下文无关文法的基础上, 将“名词短语”、“动词短语”和“名词”等这些不含有语义信息的纯语法类别, 用所讨论领域的专门信息, 像“山”、“水”和“动物”、等这些具有很强语义约束的语义类别来代替. 利用语义文法进行语义分析, 就可以排除像“论文收到教授”这类无意义的句子.
 
 \begin{example}
 下面是一个关于舰船信息的语义文法的例子:
 \begin{Verbatim}
-        S $\rightarrow $ PRESENT  the  ATTRIBUTE  of  SHIP
-        PRESENT $\rightarrow $ what  is  | can  you  tell  me
+        S $\rightarrow $ PRESENT the ATTRIBUTE of SHIP
+        PRESENT $\rightarrow $ what is | can you tell me
         ATTRIBUTE $\rightarrow $ length | class
-        SHIP $\rightarrow $ the  SHIPNAME | CLASSNAME  class  ship
+        SHIP $\rightarrow $ the  SHIPNAME | CLASSNAME class ship
         SHIPNAME $\rightarrow $ Huanghe | Changjiang
         CLASSNAME $\rightarrow $ carrier | submarine
 \end{Verbatim}
@@ -364,7 +364,7 @@ DNC采用了类似的方法, 使用一个「注意力操作」从这个内存矩
 随着 DNC的开发, 带有附加注意力机制的递归神经网络在翻译和问题回答领域显示出了巨大的潜力. 这些模型能够使用两种内存结构进行推理, 一种是小型且紧凑的LSTM内存, 一种是大型的外部内存.
 最近谷歌Google Brain 的研究人员去除掉 LSTM, 只利用注意力来传输信息, 提出了一种Transformer模型.
 Transformer 最初是应用在机器翻译任务上, 性能明显优于递归神经网络.
-随后Transformer被广泛应用到NLP的的其他任务当中, 例如问答、文本摘要、情感分析等. 过去一年, 因为Transformer, 这些方面取得了巨大的进步.
+随后Transformer被广泛应用到NLP的其他任务当中, 例如问答、文本摘要、情感分析等. 过去一年, 因为Transformer, 这些方面取得了巨大的进步.
 但这些模型仍然存在一个缺点, 即它们会把所有的信息都存储起来, 这样在每一个时间步上所消耗的计算成本和存储成本都非常大.
 我们的大脑显然不是这样做的, 我们不会像摄像机那样, 把我们一生当中接收到的所有信息存储起来. 而是会根据相关性、惊喜度、危险性、重复次数等因素来选择、过滤、整合所有的输入刺激. 换句话说, 我们会把一生的经历压缩成一组亮点记忆, 帮助我们来理解过去, 以及更好地预测未来.
 这就是如何压缩的问题.
@@ -378,7 +378,7 @@ DeepMind提出了Transformer的一个简单变种:  Compressive Transformer模�
 
 压缩Transformer保持对过去激活的细粒度记忆, 然后将其压缩为更粗的压缩记忆. 上面的模型有三层, 一个序列长度$n_s = 3$, 记忆大小$n_m = 6$, 压缩记忆大小$n_{cm} = 6$ \cite{raecompressive2019}. 高亮显示的记忆被压缩, 每层使用压缩函数fc将其压缩到单个压缩记忆中, 而不是在下一个序列中丢弃.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{作 业 题}
+\section{作 业 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{custom}[explorecolor]{探索}
 对下列每个语句给出文法分析树:
@@ -390,4 +390,33 @@ DeepMind提出了Transformer的一个简单变种:  Compressive Transformer模�
     (3)  I  heard  the  story  listening  to  the  radio.
 
     (4)  I  heard  the  kids  listening  to  the  radio.
-\end{custom} 
+\end{custom}
+
+%%%%%%---------------------------------
+\begin{think}
+  什么是自然语言处理?自然语言处理的过程有哪些层次?各层次的功能如何?
+\end{think}
+
+%%%%%%---------------------------------
+\begin{think}
+  机器翻译的一般过程包括哪些步骤?试述每个步骤的主要功能。
+\end{think}
+%%%%%%---------------------------------
+\begin{think}
+  请说出对话系统的三个主要模块及对应功能。
+\end{think}
+
+%%%%%%---------------------------------
+\begin{think}
+  什么是问答系统?请扼要介绍问答系统自动答题的步骤。
+\end{think}
+
+%%%%%%---------------------------------
+\begin{think}
+  什么是文本生成的语言模型?举例说明构建语言模型的方法。
+\end{think}
+
+%%%%%%---------------------------------
+\begin{think}
+    访问\href{https://github.com/DataCanvasIO/deeptables}{DeepTables}，学习该框架，简述网络特性，解释其在结构化数据上的表示学习能力？
+\end{think} 
